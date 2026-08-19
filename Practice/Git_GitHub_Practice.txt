@@ -1,0 +1,20 @@
+This is practice folder for git and github
+
+// First time
+
+git init 
+git add .
+git commit -m "message"
+git branch -M main
+git remote add origin = url
+git push -u origin main
+
+
+// update, changes
+
+git add .  
+git commit -m "message"
+git push origin main 
+
+
+
