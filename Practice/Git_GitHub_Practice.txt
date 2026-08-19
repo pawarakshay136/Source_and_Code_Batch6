@@ -18,3 +18,11 @@ git push origin main
 
 
 
+// 3 environments
+
+// 1 Working directory = local folder
+// 2 Stagging area = between local and git (This is self review)
+// 3 Production = GitHub
+
+
+
