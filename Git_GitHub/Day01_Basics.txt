@@ -5,3 +5,12 @@ Learning Git and GitHub basics
 Git = version Control System (VCS) used to track, manage, and save changes in code
 
 GitHub = a hosting and collaboration platform where git repositories can be stored and managed online
+
+
+
+Daily Update Workflow
+After the repository is already connected
+
+git add .
+git commit -m "Update message"
+git push origin main
