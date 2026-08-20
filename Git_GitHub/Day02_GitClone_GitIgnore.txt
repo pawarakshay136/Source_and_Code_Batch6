@@ -1,0 +1,43 @@
+// Day02: 19th August 2026 Wednesday
+
+
+Git Clone
+Git clone is used to copy/import a repository from GitHub to the local system.
+
+Steps:
+1. Open the GitHub repository
+2. Click the Code button (Green)
+3. Copy the repository URL (from copy button)
+4. Open the folder where you want to clone the repo
+5. Right Click See More Options = Open Git Bash in that folder
+6. Run
+
+git clone <repository-url> (Right click and paset/ ctrl + v not work here)
+
+Git Workflow:
+GitHub <-----> Local
+
+git clone → GitHub to Local (This is our 80/20 )
+git push → Local to GitHub
+git pull → GitHub to Local
+
+Git Add:
+git add filename → Adds a specific file to staging.
+git add . → Adds all changed/untracked files to staging.
+
+.gitignore:
+.gitignore is used to tell Git which files or folders should be ignored.
+
+To create:
+.gitignore
+
+Add the file name or file path inside .gitignore.
+
+Example:
+.env
+password.txt
+node_modules/
+
+Important:
+.gitignore works for untracked files.
+If a file is already tracked and pushed to GitHub, adding it to .gitignore will NOT remove it from GitHub automatically.
