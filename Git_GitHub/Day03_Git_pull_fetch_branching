@@ -1,0 +1,45 @@
+Day03: 20th August 2026 Thursday
+
+Git Pull:
+git pull origin main → Downloads the latest changes from the remote repository and merges them into the local branch.
+
+When to use:
+Before starting work, pull the latest changes to keep the local repository updated.
+
+Git Fetch:
+git fetch → Downloads the latest remote changes/metadata without merging them into the local branch.
+
+Metadata → Data about data.
+
+When to use:
+Use git fetch to check the latest remote changes before pulling.
+It is especially useful when working with branches.
+
+Git Pull vs Git Fetch:
+
+git fetch → Downloads changes only; does not merge.
+git pull → Downloads changes and merges them.
+
+Branching:
+A branch is a separate copy/line of development created from the main branch.
+
+Why use branches?
+- Multiple developers can work on the same project safely.
+- Changes in a branch do not directly affect the main branch.
+- Developers can work on different tasks independently.
+- A Pull Request (PR) can be created to review changes before merging into main.
+
+Example:
+
+main
+  ↓
+feature-1
+feature-2
+feature-3
+
+Each developer can work on their own branch without directly changing the main branch.
+
+Pull Request (PR):
+A Pull Request is used to submit changes from a branch for review before merging them into the main branch.
+
+Branching helps prevent developers from overwriting or losing each other's work.
