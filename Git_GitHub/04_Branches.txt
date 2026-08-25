@@ -1,0 +1,41 @@
+Day04: 24th August 2026 Monday
+
+Git Branch:
+A branch is a separate copy/line of development used to avoid conflicts and data loss while working on the same project.
+
+Pull Request (PR):
+A Pull Request is a request to merge code from a branch into the main branch after review.
+
+Creating a Branch:
+
+Step 1: Update the main branch
+
+git fetch
+git pull origin main
+
+Step 2: Create a new branch
+
+git checkout -b branchname
+
+-b → creates a new branch
+
+To switch to an existing branch:
+
+git checkout branchname
+
+Pushing Code to a Branch:
+
+git add .
+git commit -m "message"
+git push origin branchname
+
+Example:
+
+git push origin main
+
+Pull Request:
+After pushing the code to a branch, create the Pull Request from the GitHub UI.
+
+Flow:
+
+main → create branch → make changes → add → commit → push → Pull Request → review → merge into main
