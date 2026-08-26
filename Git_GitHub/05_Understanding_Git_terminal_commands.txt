@@ -1,0 +1,48 @@
+Day05: 25th August 2026 Tuesday
+
+RESTORE LOCAL FILES:
+
+git checkout -f
+→ Restores all modified files to the state of the latest commit.
+
+git checkout file_path
+→ Restores a specific file to the state of the latest commit.
+
+CHECKING DIFFERENCES:
+
+git diff
+→ Shows the differences between the last commit and current changes.
+
+BRANCHING:
+
+git checkout branch_name
+→ Switches to an existing branch.
+
+git checkout -b new_branch_name
+→ Creates a new branch and switches to it.
+
+UPDATING BRANCH:
+
+git fetch
+→ Downloads the latest metadata from the remote repository.
+
+git pull origin branch_name
+→ Downloads and merges the latest changes from the specified branch.
+
+STATUS & HISTORY:
+
+git status
+→ Shows the current status of the working directory.
+
+M → Modified file
+U → New/Untracked file
+D → Deleted file
+
+git log
+→ Shows detailed commit history.
+
+git log -p
+→ Shows commit history with changes/details.
+
+git log --oneline
+→ Shows a compact one-line commit history. 
