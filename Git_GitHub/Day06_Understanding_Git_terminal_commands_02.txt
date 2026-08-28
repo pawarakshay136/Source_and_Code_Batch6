@@ -1,0 +1,13 @@
+Day06: 27th August 2026 Thursday
+
+git clean -f = Delete untracked files.
+
+git reset = Move staged files back to untracked.
+
+git reset filename = Move a specific staged file back to untracked.
+
+git restore filename = Discard changes made to a file.
+
+git blame filepath = Shows who changed each line of a file.
+
+git reflog = Shows the history of changes to HEAD and branch references.
