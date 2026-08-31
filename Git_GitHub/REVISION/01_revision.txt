@@ -1,0 +1,53 @@
+Day07: Git and GitHub Workflow - 30th August 2026 Sunday
+
+Git = Version Control Tool/Software used to track and manage code changes.
+
+GitHub = Hosting platform used to store and collaborate on Git repositories.
+
+GitHub alternatives = GitLab, Bitbucket, Azure, AWS
+
+Git Workflow:
+Local Folder → Staging Area → Local Git Repository → GitHub
+
+FIRST TIME PUSHING CODE TO A NEW REPOSITORY:
+
+git init = Initialize Git repository.
+git add . = Add all files to staging.
+git commit -m "first commit" = Create a checkpoint.
+git branch -M main = Rename branch to main.
+git remote add origin <repo_url> = Connect local repo to GitHub.
+git push -u origin main = Push code to GitHub.
+
+UPDATING AN EXISTING REPOSITORY:
+
+git add . = Add changes to staging.
+git commit -m "message" = Create a checkpoint.
+git push origin branchname = Push changes to GitHub.
+
+CLONING A REPOSITORY:
+
+git clone <repo_url> = Copy an existing GitHub repository to the local system.
+
+GETTING UPDATED CHANGES:
+
+git fetch = Download the latest metadata from the remote repository.
+git pull origin main = Download and merge the latest changes.
+
+BRANCHING:
+
+Branch = A separate copy/line of development used to perform tasks without directly affecting main.
+
+INDUSTRY SOP:
+
+1. git checkout main = Switch to main branch.
+2. git fetch = Get latest remote metadata.
+3. git pull origin main = Update the main branch.
+4. git checkout -b branch_name = Create a new branch.
+5. git add . = Stage changes.
+6. git commit -m "message" = Create a checkpoint.
+7. git push origin branch_name = Push the branch to GitHub.
+8. Create a Pull Request through GitHub UI.
+9. Add proper title, reviewers, and assign yourself.
+10. git checkout main = Switch back to main.
+11. git fetch = Get latest metadata.
+12. git pull origin main = Update the main branch.
