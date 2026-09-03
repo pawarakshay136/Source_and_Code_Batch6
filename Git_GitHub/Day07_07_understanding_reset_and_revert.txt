@@ -1,0 +1,22 @@
+Day08: Git Reset and Git Revert - 1st September 2026 Tuesday
+Day09: Git Reset and Git Revert - 2nd September 2026 Wednesday
+
+Note: Day08 and Day09 topics are covered under Day07 in the class notes and branch git_adance. 
+
+
+Git Reset & Git Revert
+
+git reset --hard <commit_id> = Moves the branch back to a specific commit and removes later changes from the working directory.
+
+git reset --hard is useful when you want to completely go back to an earlier commit.
+
+After reset:
+git add .
+git commit -m "message"
+git push origin branch_name -f
+
+git revert <commit_id> = Creates a new commit that reverses the changes of a specific previous commit.
+
+Reset = Removes/moves back commits from branch history.
+Revert = Safely reverses a commit by creating a new commit.
+
