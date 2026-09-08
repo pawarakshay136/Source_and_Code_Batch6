@@ -1,0 +1,127 @@
+
+04th September 2025 Friday
+
+====================================================
+RULES BEFORE STARTING JAVASCRIPT
+====================================================
+
+Learning technical skills
+requires DAILY PRACTICE and CONSISTENCY.
+
+----------------------------------------------------
+JAVASCRIPT
+----------------------------------------------------
+
+Every day:
+- Attend a 45-minute to 1-hour teaching session.
+- You will get 2–3 assignments.
+- Assignments are based on concepts.
+- Assignments are mainly based on logical thinking.
+- Learning is also interview-oriented.
+
+Support Session:
+- Ask questions about assignments.
+- Discuss concepts.
+- Ask for more examples.
+- Practice interview questions.
+- Ask topic-related doubts.
+
+
+WHAT HAPPENS IF YOU DON'T PRACTICE JAVASCRIPT?
+
+1 Day:
+- You may not feel much difference.
+
+1 Week:
+- You may start losing clarity.
+- You may struggle with loops, strings, and other concepts.
+
+1 Month:
+- You may lose connection with the concepts.
+- Your logical thinking may start getting weaker.
+- You may fall behind the current market requirements.
+
+1 Year:
+- You may feel like you are back to nowhere.
+
+IMPORTANT:
+Logical thinking takes years to build.
+It may take approximately 3–4 years of consistent
+practice and experience to build strong logical skills.
+
+We don't have unlimited time, so consistency is important.
+
+
+====================================================
+MANUAL TESTING
+====================================================
+
+1 Day:
+- Relax / No major impact.
+
+1 Week:
+- You may start forgetting domain knowledge.
+- Application knowledge may become weaker.
+
+1 Month:
+- Your ability to identify bugs effectively may reduce.
+
+1 Year:
+- You may go out of scope / lose connection
+  with the testing field.
+
+IMPORTANT:
+Manual Testing requires approximately
+2–3 months of consistent practice to build a foundation.
+
+
+====================================================
+GIT & GITHUB
+====================================================
+
+1 Day:
+- You may forget some command syntax.
+
+1 Week:
+- You may start getting confused.
+- Pull Requests (PRs) and workflows may become confusing.
+- You may start questioning your own ability.
+
+1 Month:
+- You may remember only basic commands like:
+  git add
+  git commit
+
+1 Year:
+- You may completely lose connection
+  with Git concepts and workflows.
+
+IMPORTANT:
+Git and GitHub may require approximately
+4–5 months of regular practice to become comfortable.
+
+
+====================================================
+MAIN RULE:
+====================================================
+
+Learning → Practice → Forget → Revise → Practice Again
+
+Consistency is more important than learning
+a lot in one day and then stopping.
+
+Don't just attend sessions.
+Practice concepts and assignments regularly.
+
+
+
+
+
+
+
+
+
+
+
+
+
