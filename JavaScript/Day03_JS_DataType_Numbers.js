@@ -237,3 +237,52 @@ console.log(digit_1, " " ,digit_2, " ", digit_3)
 
 
 console.log(digit_1, " " ,digit_1, " ", digit_1)
+
+// Notes
+/*
+
+1. Math.random()
+   - Generates a random decimal number.
+   - Range: 0 (inclusive) to less than 1 (exclusive).
+   - Example: 0.2456, 0.7891, etc.
+
+2. Math.floor()
+   - Removes the decimal part of a number.
+   - Converts a decimal number into an integer.
+
+3. GENERATING RANDOM INTEGERS
+
+   Formula:
+   Math.floor(Math.random() * (max - min + 1)) + min
+
+   This formula generates a random integer
+   between MIN and MAX (both inclusive).
+
+4. PRACTICAL EXAMPLES COVERED
+
+   - Generate a random Indian mobile number.
+   - Simulate the throw of a dice (1 to 6).
+   - Generate a random integer between 50 and 175.
+   - Generate a random decimal number between 2.3 and 7.5.
+   - Generate progressive numbers from 0 to 100 in multiples of 5.
+   - Generate dummy 12-digit test numbers in groups.
+
+====================================================
+IMPORTANT CONCEPT:
+
+Math.random() gives:
+0 <= random number < 1
+
+Example for dice:
+
+Math.random() * 6
+Range: 0 to 5.999...
+
+Math.floor()
+Range: 0 to 5
+
++ 1
+Final Range: 1 to 6
+
+====================================================
+*/ 
