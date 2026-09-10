@@ -134,3 +134,106 @@ console.log(Math.random()*100) // lowest number 0 and highest number is 99.9999
 
 //
 console.log(Math.round(Math.random()*100)) 
+
+// 10th September 2026, Thursday  8.30 PM to 9.30 PM
+
+// Q1 Create a random mobile number 
+
+// DATA that we get form the question - > 
+// assuming the phone number is indian - >  digits 
+// indian numbers starts with 6 7 8 9
+// now we will spilt the phone number in 2 parts 
+// firstdigits = 6 , 7 ,8 ,9 
+// reaming = 
+let firstDigit = Math.floor(Math.random()*4) + 6  
+// 0-0.9999
+// 0-4.9999
+//0-4
+
+console.log(firstDigit)
+// now i have starting number 
+let Reamining_Numbers = Math.floor(Math.random()*1000000000)
+// math. random -> 0-0.9
+// if multipled by 10 --> 0-9.999
+// 100 - > 0-99.99
+//1000->999.9999
+console.log(firstDigit,Reamining_Numbers)
+//6 775510257
+//6 964722464
+
+
+//2 PROBLEM - generate a program to simulate the the throw of dice 
+
+// generate a random number between 1 and 6 
+
+let dice_1 = Math.floor(Math.random()*6)+1
+
+//0 -0.9999
+
+//0-5.99999  -
+//after round 
+// 0-6 
+
+// lowest - > 0*6 =>0
+// highest -> 0.9 *6 => 5.4
+
+// 0 -5
+
+//1 -6
+
+console.log(dice_1)
+
+
+// 3general formula to tackel math.random problem 
+
+
+// genearte min between  max 
+
+
+//Math.floor(Math.random()*(max-min+1)+min)
+
+
+//example-->
+
+// genrate a number between 50 - 175 
+
+let Partical_number = Math.floor(Math.random()*(175-50+1)+50)
+
+console.log(Partical_number)
+
+
+
+//4  generate a random number between 2.3 and 7.5
+
+let decimal_number = Math.random()*(7.5-2.3)+2.3
+
+console.log(decimal_number.toFixed(1))
+
+//5.3498627871592355
+
+//5 generate a number between 0 - 100 but it should be in progessive 
+
+let Five_num = Math.floor(Math.random()*21)*5
+
+console.log(Five_num)
+
+
+//6 genarte a random adhar number 
+
+/*
+Aadhaar Number 
+StructureLength: Exactly 12 digits
+Format: Grouped in blocks of four digits (e.g., XXXX XXXX XXXX).
+*/
+
+////Math.floor(Math.random()*(max-min+1)+min)
+
+let digit_1 = Math.floor(Math.random()*(10000-1000)+1000)
+let digit_2 = Math.floor(Math.random()*(10000-1000)+1000)
+let digit_3 = Math.floor(Math.random()*(10000-1000)+1000)
+
+console.log(digit_1, " " ,digit_2, " ", digit_3)
+
+
+
+console.log(digit_1, " " ,digit_1, " ", digit_1)
