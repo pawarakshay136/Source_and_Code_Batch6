@@ -12,3 +12,5 @@ console.log(fixedAmount)
 
 console.log(typeof roundedAmount)
 console.log(typeof fixedAmount)
+
+// javascript string practice
