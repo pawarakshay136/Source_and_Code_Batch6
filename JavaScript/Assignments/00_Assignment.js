@@ -1,16 +1,7 @@
-let amount = 1234.56789
+let number1 = Math.round(28 / 5) * 5
+let number2 = Math.round(32 / 5) * 5
+let number3 = Math.round(37 / 5) * 5
 
-// Multiply by 100, round the number, then divide by 100
-let roundedAmount = Math.round(amount * 100) / 100
-
-console.log(roundedAmount)
-
-// Compare with toFixed(2)
-let fixedAmount = amount.toFixed(2)
-
-console.log(fixedAmount)
-
-console.log(typeof roundedAmount)
-console.log(typeof fixedAmount)
-
-// javascript string practice
+console.log(number1)
+console.log(number2)
+console.log(number3)
