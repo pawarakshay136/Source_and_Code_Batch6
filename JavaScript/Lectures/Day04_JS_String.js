@@ -270,3 +270,75 @@ console.log(py_str)
 let py_str2 = basic_str.replaceAll("javascript","java")
 
 console.log(py_str2) // hello i am leanrning java and java is a very intersting lang 
+
+// 17th September 2026, Thursday  9 PM TO 10 PM
+
+//indexOf() --> this will give you the index of the given character of the string 
+// this will only give the first instacne of the index
+
+
+console.log(basic_str.indexOf("a"))
+
+
+//lastIndexOf()-->this method is used to replace all the instances of the character in string
+//// this will only give the last instacne of the index
+console.log(basic_str.lastIndexOf("a"))
+
+
+// startsWith() --> this will verify if your string strat with a paricular character or not 
+// the retrun type is boolean
+
+let name_fn ="hello my name is xyz"
+
+console.log(name_fn.startsWith("h"))
+// it cases senstive method
+
+
+//endsWith() --> this will verify if your string ending with a paricular character or not 
+console.log(name_fn.endsWith("z"))
+
+
+//-------------------------------------------------------------
+
+/**
+ * match ->
+ * matchALL()->
+ * split()-> array 
+ * 
+ */
+
+
+
+// problem statement -> 
+
+// remove all the spaces form the given string 
+
+
+let space_str = " hello this is a session for string method used i need to spaces for this string "
+
+let reomved_space = space_str.replaceAll(" ","")
+
+console.log(reomved_space)
+//hellothisisasessionforstringmethodusedineedtospacesforthisstring
+
+
+//trim() -> this will remove strat and ends space 
+
+// let space_remove = space_str.trim()
+// console.log(space_remove)
+
+let str__2 = "hello_my_name_is_siddhant"
+
+
+// now replace this _ with ""
+
+
+
+
+// write a program to generate a random aplhabet everytime 
+
+// number 
+// random ()
+// string 
+// string propetry 
+// string varaible retired  
