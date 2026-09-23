@@ -51,8 +51,8 @@ console.log(typeof Number(str_num_2)) // number
 console.log(Number(""))        // 0
 console.log(Number(null))      // 0
 console.log(Number(undefined)) // NaN = Not a number
-console.log(Number(true))      // 1 boolean (true = 0)
-console.log(Number(false))     // 0 boolean (false = 1)
+console.log(Number(true))      // 1 boolean (true = 1)
+console.log(Number(false))     // 0 boolean (false = 0)
 
 // ------------------------------------------------------------
 // 2.2 parseFloat() -> converts a string into a FLOATING (decimal) number
