@@ -1,34 +1,21 @@
-//Q3 --> take a target date -> let target_date = "2026-12-31"    ( input format -> YYYY-MM-DD )
-//
-//        calculate HOW MANY DAYS are left BETWEEN TODAY and the target date
-//        and print ->  "Days left until 2026-12-31 : 92"
-//
-//        HINTS ->
-//        - new Date("2026-12-31") -> creates a date object from a string
-//        - subtracting two dates -> ( target_date_obj - today ) -> the result is in MILLISECONDS
-//        - convert ms -> days -> divide by ( 1000 * 60 * 60 * 24 )   ( ms in one day )
-//        - wrap it with Math.ceil() -> so a partially started day counts as a full day ( lecture 03 )
-//        - print the result with a template literal
-//        - TEST with -> "2027-01-01" and "2026-10-01" and check the numbers
-//
-//        THINK -> what will the answer be when the target date is IN THE PAST ?
+//Q4 --> FACTORS -> print every factor of the number ( starter -> let factN = 60 )
+//        one factor per line , in increasing order
+//        HINT -> f is a factor of n when n % f === 0 -> loop f from 1 -> n
+//        BONUS -> also print the SUM of all the factors
+//        TEST with -> 60 ( factors sum = 168 ) , 13 ( prime -> only 1 and 13 -> sum = 14 )
+//                      28 ( a PERFECT number -> sum of the factors WITHOUT 28 itself = 28 -> why ? )
 
-/**
- * SAMPLE ( run on 30-09-2026 )
- *
- * Days left until 2026-12-31 : 92
- */
- 
-let date = new Date()
-let target_date = "2026-12-31" 
+console.log("<-------------------- Q4 ------------------------------------>")
 
-let difference = new Date(target_date) - date
-console.log(difference) // MILLISECONDS
+let factN = 60 // TEST with -> 13 , 28
+let factSum = 0
 
-// ms -> days -> divide by ( 1000 * 60 * 60 * 24 )
-let days_left =  Math.ceil(difference / ( 1000 * 60 * 60 * 24 ))
-console.log(`Days left until ${target_date} : ${days_left}`)
-
-
-
-
+for( let i = 1; i <= factN; i++){
+    if(factN % i === 0){
+        console.log(i)
+        factSum = factSum + i
+        }
+}
+console.log(`Fact Sum is :- ${factSum}`) 
+       
+   
