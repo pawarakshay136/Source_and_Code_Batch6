@@ -155,7 +155,37 @@ console.log(`"${factNum}! = ${result}"`)
 
 console.log("<-------------------- Q4 ------------------------------------>")
 
+console.log("<-------------------- Q4 ------------------------------------>")
+
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 10
+// 12
+// 15
+// 20
+// 30
+// 60
+// Fact Sum is :- 168
+
 let factN = 60 // TEST with -> 13 , 28
+let factSum = 0
+
+for( let i = 1; i <= factN; i++){
+    if(factN % i === 0){
+        console.log(i)
+        factSum = factSum + i
+        }
+}
+console.log(`Fact Sum is :- ${factSum}`) 
+       
+//  28 ( a PERFECT number -> sum of the factors WITHOUT 28 itself = 28 -> why ? )
+// from factors of 28 if we remove 28 remaining is = 1, 2, 4, 7, 14 = 28 total
+// so its 28 agian 
 
 // ------------------- SECTION B : LOOP OVER A STRING -------------------
 
@@ -168,7 +198,35 @@ let factN = 60 // TEST with -> 13 , 28
 //                 upper letter -> the character is still equal to its own toUpperCase()
 //        expected ( PART B ) -> uppercase = 2 , lowercase = 8   ( J and S are the big ones )
 
+console.log(`------------------- SECTION B : LOOP OVER A STRING -------------------`)
+console.log("<-------------------- Q5 ------------------------------------>")
+
 let info_str = "JavaScript"
+
+// PART A: Print index and character
+for (let i = 0; i < info_str.length; i++) {
+    let ch = info_str[i] // Get character
+    console.log(`${i} -> ${ch}`) // Print index
+}
+
+// PART B: Count uppercase and lowercase
+let uppercase_count = 0
+let lowercase_count = 0
+
+for (let i = 0; i < info_str.length; i++) {
+    let ch = info_str[i] // Get character
+
+    if (ch.toUpperCase() !== ch.toLowerCase()) { // Check letter
+        if (ch === ch.toUpperCase()) { // Check uppercase
+            uppercase_count++ // Count uppercase
+        } else {
+            lowercase_count++ // Count lowercase
+        }
+    }
+}
+
+console.log("Uppercase =", uppercase_count)
+console.log("Lowercase =", lowercase_count)
 
 
 //Q6 --> count the VOWELS ( a e i o u ) in the string ( starter below )
@@ -176,8 +234,22 @@ let info_str = "JavaScript"
 //                counter starts at 0 ( theory notes -> section 4.3 )
 //        expected -> 10
 //        TEST with -> change the string to "HELLO WORLD" ( expected -> 3 ) and re-check
+console.log("<-------------------- Q6 ------------------------------------>")
 
-let v_str = "i love writing javascript loops" // expected -> 10
+// Output:
+// Total number of vowels in given string are:- 10
+let v_str = "i love writing javascript loops"
+let vowel_count = 0 // initial count 0 and store in variable
+let vowels = "aeiou" // vowels 
+
+for (let i = 0; i < v_str.length; i++) { // iterating for loop index starts with 0
+    let ch = v_str[i].toLowerCase() // get character
+    // condition check
+    if (vowels.includes(ch)) { // check vowel
+        vowel_count++ // count vowel
+    }
+}
+console.log(`Total number of vowels in given string are:- ${vowel_count}`)
 
 
 //Q7 --> count the WORDS without using ANY method ( no split / no trim )
@@ -187,8 +259,22 @@ let v_str = "i love writing javascript loops" // expected -> 10
 //        expected -> 5
 //        THINK ( write in a comment ) -> ONE example string where this trick gives a WRONG answer
 
-let count_str = "loops make boring code interesting" // expected -> 5
+console.log("<-------------------- Q7 ------------------------------------>")
 
+// Output:
+// Total number of words are:- 5
+let count_str = "loops make boring code interesting"
+let word_count = 1 // to store word count 
+
+for (let i = 0; i < count_str.length; i++) { // iterating str index start form 0
+    if (count_str[i] === " ") { // check space
+        word_count++ // count word
+    }
+}
+console.log(`Total number of words are:- ${word_count}`)
+
+// "Akshay  Pawar" gives wrong count because it has double spaces
+// Double spaces give wrong count
 
 //Q8 --> REVERSE a string with a loop -> do NOT use .split / .reverse / .slice
 //        starter -> let r_str = "javascript"
@@ -199,8 +285,40 @@ let count_str = "loops make boring code interesting" // expected -> 5
 //                    tpircsavaj
 //        TEST with -> "madam" , "js" ( expected -> "sj" )
 
-let r_str = "javascript"
+console.log("<-------------------- Q8 ------------------------------------>")
 
+// Output:
+// The original string is:- javascript
+// The reversed string is:- tpircsavaj
+// Palindrome: Result: "javascript" is NOT a palindrome
+
+// "madam"
+// The original string is:- madam
+// The reversed string is:- madam
+// Result: "madam" IS a palindrome
+
+// "js"
+// The original string is:- js
+// The reversed string is:- sj
+// Result: "js" is NOT a palindrome
+
+
+let r_str = "js" 
+let reversed_str = "" // to store and print new reverse string
+
+for (let i = r_str.length - 1; i >= 0; i--) { // iterating str index start from 0, 
+    reversed_str = reversed_str + r_str[i] // add character
+}
+
+console.log(`The original string is:- ${r_str}`)
+console.log(`The reversed string is:- ${reversed_str}`)
+
+// Check palindrome
+if (r_str === reversed_str) { // Triple equals compares both = data type and the value
+    console.log(`Result: "${r_str}" IS a palindrome`)
+} else {
+    console.log(`Result: "${r_str}" is NOT a palindrome`)
+}
 
 //Q9 --> PALINDROME check with a loop -> a word that reads the same forwards and backwards
 //        starter -> let p_str = "madam"
@@ -221,8 +339,33 @@ let p_str = "madam" // TEST with -> "hello" , "racecar"
 //        TEST with -> 47891 ( 29 ) , 1000 ( 1 ) , 0 ( 0 -> a while loop runs 0 rounds for 0
 //                   -> write in a comment why that is still CORRECT )
 
-let s_num = 47891 // TEST with -> 1000 , 0
+console.log("<------------------- SECTION C : WHILE ( END POINT NOT KNOWN ) ------------------->")
+console.log("<-------------------- Q10 ------------------------------------>")
 
+// Output:
+// 47891 
+// Sum of digits of 47891 = 29
+
+// 1000
+// Sum of digits of 1000 = 1
+
+// 0
+// Sum of digits of 0 = 0
+
+let s_num = 0
+let temp_num = s_num
+let sum = 0
+
+while (temp_num > 0) {
+    let digit = temp_num % 10 // get last digit
+    sum = sum + digit // add digit
+    temp_num = Math.floor(temp_num / 10) // remove last digit
+}
+
+console.log(`Sum of digits of ${s_num} = ${sum}`)
+
+// if number is 0 loop does not run
+// sum remains 0 which is correct
 
 //Q11 --> REVERSE THE NUMBER -> starter -> let rev_num = 12345
 //        print -> "12345 reversed = 54321"
@@ -231,8 +374,28 @@ let s_num = 47891 // TEST with -> 1000 , 0
 //                 start reversed at 0 , remove the digit from n , loop while n > 0
 //        TEST with -> 12345 ( 54321 ) , 7 ( 7 ) , 100 ( 1 -> WHY is the answer not 001 ? write it )
 
-let rev_num = 12345 // TEST with -> 7 , 100
+console.log("<-------------------- Q11 ------------------------------------>")
 
+// Output:
+// 12345 reversed = 54321
+
+// 7 reversed = 7
+
+// 100 reversed = 1
+
+let rev_num = 100 
+let temp_num1 = rev_num
+let reversed = 0
+
+while (temp_num1 > 0) {
+    let last_digit = temp_num % 10 // get last digit
+    reversed = reversed * 10 + last_digit // reverse digit
+    temp_num1 = Math.floor(temp_num1 / 10) // remove last digit
+}
+
+console.log(`${rev_num} reversed = ${reversed}`)
+
+// 100 becomes 1 because numbers do not keep leading zeros
 
 //Q12 --> FIBONACCI -> every term = sum of the previous 2 terms ( 0 , 1 , 1 , 2 , 3 , 5 , 8 ... )
 //        print ALL terms that are BELOW 500 using a while loop
@@ -241,10 +404,37 @@ let rev_num = 12345 // TEST with -> 7 , 100
 //                 print first , then shift -> first = second , second = next
 //        expected -> 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377    ( next would be 610 -> stop )
 
-let fib_a = 0
-let fib_b = 1
 // TEST -> do not forget the FIRST term ( 0 ) -> print it before the loop or inside round 1
 
+console.log("<-------------------- Q12 ------------------------------------>")
+
+// Output:
+// 0
+// 1
+// 1
+// 2
+// 3
+// 5
+// 8
+// 13
+// 21
+// 34
+// 55
+// 89
+// 144
+// 233
+// 377
+
+let fib_a = 0
+let fib_b = 1
+let fib_next = 0
+
+while (fib_a < 500) {
+    console.log(fib_a) // Print term
+    fib_next = fib_a + fib_b // Add terms
+    fib_a = fib_b // Shift first
+    fib_b = fib_next // Shift second
+}
 
 //Q13 --> DOUBLE UNTIL IT PASSES ONE MILLION ->
 //        start at 1 , keep doubling , and COUNT how many doublings are needed before the value
@@ -254,8 +444,22 @@ let fib_b = 1
 //                 keep a counter outside , double the value and increase the counter every round
 //        expected -> steps = 20 , final value = 1048576
 
-let dbl_num = 1
+console.log("<-------------------- Q13 ------------------------------------>")
 
+// Output:
+// Steps = 20
+// Final value = 1048576
+
+let dbl_num = 1
+let steps = 0
+
+while (dbl_num <= 1000000) {
+    dbl_num = dbl_num * 2 // Double value
+    steps++ // Count step
+}
+
+console.log(`Steps = ${steps}`)
+console.log(`Final value = ${dbl_num}`)
 
 
 // ------------------- SECTION D : DO...WHILE ( FIRST RUN GUARANTEED ) -------------------
@@ -267,8 +471,27 @@ let dbl_num = 1
 //                 write in a comment WHY a normal while loop fails for 0 here ( it would print 0 digits )
 //        TEST with -> 47891 ( 5 ) , 1000 ( 4 ) , 0 ( 1 )
 
-let d_num = 47891 // TEST with -> 1000 , 0
+// TEST with -> 1000 , 0
+console.log("------------------- SECTION D : DO...WHILE ( FIRST RUN GUARANTEED ) -------------")
+console.log("<-------------------- Q14 ------------------------------------>")
 
+// Output:
+// 47891 has 5 digits
+// 1000 has 4 digits
+// 0 has 1 digits
+
+let d_num = 0
+let temp_num2 = d_num
+let digit_count = 0
+
+do {
+    digit_count++ // Count digit
+    temp_num2 = Math.floor(temp_num2 / 10) // Remove digit
+} while (temp_num2 > 0)
+
+console.log(`${d_num} has ${digit_count} digits`)
+
+// Normal while skips 0 because its condition is false at the start
 
 //Q15 --> ATM MENU simulation with do...while ->
 //        a menu must be SHOWN at least once before the user does anything -> that is exactly
@@ -287,8 +510,35 @@ let d_num = 47891 // TEST with -> 1000 , 0
 //                 2) print the matching message   3) round++
 //                 condition -> while ( choice !== 5 )
 
+console.log("<-------------------- Q15 ------------------------------------>")
+
+// Output:
+// Deposit selected
+// Balance selected
+// Exit selected
+
 let round = 1
 let choice = 0
+
+do {
+    if (round === 1) {
+        choice = 1
+    } else if (round === 2) {
+        choice = 2
+    } else if (round === 3) {
+        choice = 5
+    }
+
+    if (choice === 1) {
+        console.log("Deposit selected")
+    } else if (choice === 2) {
+        console.log("Balance selected")
+    } else if (choice === 5) {
+        console.log("Exit selected")
+    }
+
+    round++ // next round
+} while (choice !== 5)
 
 
 // ------------------- SECTION E : NESTED LOOPS & PATTERNS -------------------
@@ -311,6 +561,17 @@ let choice = 0
 //        HINT -> outer loop = rows ( i from 1 -> 4 ) , the INNER loop runs i times
 //                 ( a fixed inner count = every row the same length = wrong -> mistakes table )
 
+console.log("<-------------------- Q16 : PART A -------------------->")
+// Output
+// 1
+// 22
+// 333
+// 4444
+
+for (let i = 1; i <= 4; i++) {
+    console.log(String(i).repeat(i)) // Repeat digit
+}
+
 
 //Q17 --> print this RIGHT ALIGNED triangle ( 4 rows ) -> each row = SPACES first , then stars
 //
@@ -324,6 +585,27 @@ let choice = 0
 //        NOTE -> spaces are INVISIBLE in the output -> first print with the quotes to count them ,
 //                 then remove the quotes ( the quotes are NOT part of the pattern )
 
+console.log("<-------------------- Q17 ------------------------------------>")
+
+// Output
+// "   *"
+// "  **"
+// " ***"
+// "****"
+
+for (let i = 1; i <= 4; i++) {
+    let row = ""
+
+    for (let j = 1; j <= 4 - i; j++) {
+        row = row + " " // add space
+    }
+
+    for (let j = 1; j <= i; j++) {
+        row = row + "*" // add star
+    }
+
+    console.log(`"${row}"`)
+}
 
 //Q18 --> print this number pyramid ( 5 rows ) ->
 //
@@ -338,6 +620,28 @@ let choice = 0
 //                 one inner loop for the spaces , another for the digits
 //        CHECK -> the row widths grow like 5 , 6 , 7 , 8 , 9 characters -> only then it is a pyramid
 
+console.log("<-------------------- Q18 ------------------------------------>")
+
+// Output
+// "    1"
+// "   222"
+// "  33333"
+// " 4444444"
+// "555555555"
+
+for (let i = 1; i <= 5; i++) {
+
+    let row = ""
+    for (let j = 1; j <= 5 - i; j++) {
+        row = row + " " // Add space
+    }
+
+    for (let j = 1; j <= 2 * i - 1; j++) {
+        row = row + i // Add digit
+    }
+    console.log(`"${row}"`)
+}
+
 // ------------------- SECTION F : break & continue -------------------
 
 //Q19 --> ONE loop from 1 -> 30 with BOTH keywords ->
@@ -349,6 +653,27 @@ let choice = 0
 //        a) why is 24 not printed ? -> 24 % 3 === 0 -> continue skips that round
 //        b) why are 25 -> 30 not printed ? -> break exits the loop completely
 
+console.log("<-------------------- Q19 ------------------------------------>")
+
+// Output:
+// 1 2 4 5 7 8 10 11 13 14 16 17 19 20 22 23 
+
+let result1 = ""
+
+for (let i = 1; i <= 30; i++) {
+
+    if (i === 25) {
+        break // stop loop
+    }
+    if (i % 3 === 0) {
+        continue // skip number
+    }
+
+    result1 = result1 + i + " "
+}
+console.log(result1)
+// 24 is skipped because it is divisible by 3
+// 25 to 30 are not printed because break stops the loop
 
 //Q20 --> SEARCH + break -> find the FIRST number between 1 and 500 that is divisible
 //        by BOTH 7 and 11
@@ -358,18 +683,55 @@ let choice = 0
 //        HINT -> divisible by both -> ( n % 7 === 0 && n % 11 === 0 ) -> think LCM ( 7 x 11 )
 //        expected -> first number = 77 , rounds run = 77 , rounds without break = 500
 
+console.log("<-------------------- Q20 ------------------------------------>")
+
+// Output:
+// First number = 77
+// Rounds run = 77
+
+let found_num = 0
+let rounds = 0
+
+for (let i = 1; i <= 500; i++) {
+    rounds++ // Count round
+
+    if (i % 7 === 0 && i % 11 === 0) {
+        found_num = i
+        break // Stop loop
+    }
+}
+console.log(`First number = ${found_num}`)
+console.log(`Rounds run = ${rounds}`)
+
+// Without break the loop would run 500 rounds
+
 
 // ------------------- SECTION G : INTERVIEW -> PREDICT THE OUTPUT ( write the answer FIRST ) -------------------
 
 //Q21 --> INTERVIEW -> when do you choose for vs while vs do...while ? answer in 3 short lines
 //        ( theory notes -> section 8 comparison table )
+console.log("<--------SECTION G : INTERVIEW -> PREDICT THE OUTPUT ( write the answer FIRST )------------->")
+console.log("<-------------------- Q21 ------------------------------------>")
 
+// for: Use when the number of rounds is known
+// while: Use when the number of rounds is not known
+// do...while: Use when the loop must run at least once
 
 //Q22 --> PREDICT -> why does this hang ? write your answer FIRST , then run it CAREFULLY
 //        for (let i = 0; i >= 0; i++) { console.log(i) }
 //        HINT -> the direction must move towards the condition becoming FALSE ( direction trap )
 //        IMPORTANT -> keep this line COMMENTED while testing this file , otherwise the
 //                     assignment itself never finishes ( stop a running program with Ctrl + C )
+
+console.log("<-------------------- Q22 ------------------------------------>")
+
+// Answer: The condition i >= 0 always remains true.
+// i keeps increasing, so it never becomes negative.
+
+// Keep this loop commented while testing.
+// for (let i = 0; i >= 0; i++) {
+//     console.log(i)
+// }
 
 
 //Q23 --> PREDICT -> what is wrong here ? ( write the answer as a comment , then prove it )
@@ -378,12 +740,53 @@ let choice = 0
 //        HINT -> the last valid index is length - 1 -> what does name_str[name_str.length] give ?
 //        -> write the CORRECT condition AND the exact output in comments
 
+console.log("<-------------------- Q23 ------------------------------------>")
+
+let name_str = "javascript"
+
+// Wrong: i <= name_str.length
+// Last valid index is length - 1
+// name_str[name_str.length] gives undefined
+
+// Correct condition:- i < name_str.length
+// Output:
+// j
+// a
+// v
+// a
+// s
+// c
+// r
+// i
+// p
+// t
+
+for (let i = 0; i < name_str.length; i++) {
+    console.log(name_str[i])
+}
+
 
 //Q24 --> PREDICT the 2 outputs ( write them FIRST , then run and verify ) ->
 //        a) for (let i = 0; i <= 10; i++) { if (i === 5) break; console.log(i) }
 //        b) for (let i = 0; i <= 10; i++) { if (i === 5) continue; console.log(i) }
 //        HINT -> break stops EVERYTHING , continue skips only THIS round ( notes -> section 7 )
+console.log("<-------------------- Q24 ------------------------------------>")
 
+// a)
+// Output: 0 1 2 3 4
+
+for (let i = 0; i <= 10; i++) {
+    if (i === 5) break
+    console.log(i)
+}
+
+// b)
+// Output: 0 1 2 3 4 6 7 8 9 10
+
+for (let i = 0; i <= 10; i++) {
+    if (i === 5) continue
+    console.log(i)
+}
 
 //Q25 --> PREDICT -> how many ROUNDS does each loop run ? ( write your answer FIRST -> dry run )
 //        A) for (let i = 1; i <= 100; i = i * 2) { console.log(i) }
@@ -393,6 +796,25 @@ let choice = 0
 //                 B) 10 , 7 , 4 , 1 , ... which is the last value printed ?
 //        expected -> A) 7 rounds ( the final i = 128 )     B) prints -> 10 7 4 1  ( 4 rounds )
 
+console.log("<-------------------- Q25 ------------------------------------>")
+
+// A)
+// Values: 1, 2, 4, 8, 16, 32, 64
+// Next i = 128, condition becomes false.
+// Answer: 7 rounds
+
+for (let i = 1; i <= 100; i = i * 2) {
+    console.log(i)
+}
+console.log("<-------------------- Q25-B -------------------------->")
+// B)
+// Values: 10, 7, 4, 1
+// Next i = -2, condition becomes false.
+// Answer: 4 rounds
+
+for (let i = 10; i > 0; i = i - 3) {
+    console.log(i)
+}
 
 //Q26 --> PREDICT -> what is the FINAL value of out ? ( dry run BOTH loops )
 //        let out = 0
@@ -405,6 +827,20 @@ let choice = 0
 //        INTERVIEW POINT -> break exits ONLY the loop it lives in -> does it also kill the OUTER loop ?
 //        expected -> out = 10  ( the inner loop runs only j = 1 , j = 2 for every outer round )
 
+console.log("<-------------------- Q26 ------------------------------------>")
+
+let out = 0
+
+for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5; j++) {
+        if (j === 3) break
+        out++
+    }
+}
+console.log(out)
+
+// Answer: out = 10
+// break exits only the inner loop
 
 //Q27 --> PREDICT -> what is the final value of total ? ( dry run 1 -> 10 )
 //        let total = 0
@@ -415,6 +851,18 @@ let choice = 0
 //        HINT -> continue skips ONLY that round -> total collects which numbers ?
 //        expected -> total = 25  ( 1 + 3 + 5 + 7 + 9 )
 
+console.log("<-------------------- Q27 ------------------------------------>")
+
+let total = 0
+
+for (let i = 1; i <= 10; i++) {
+    if (i % 2 === 0) continue
+    total += i
+}
+console.log(total)
+
+// Answer: total = 25
+// Added numbers: 1 + 3 + 5 + 7 + 9
 
 //Q28 --> PREDICT -> what is stored in s at the end ? ( dry run BOTH loops -> write every append )
 //        let s = ""
@@ -426,6 +874,21 @@ let choice = 0
 //        HINT -> i = 1 -> appends 3 , 2 , 1   then i = 2 -> appends ?   then i = 3 -> appends ?
 //        expected -> s = "321323"
 
+console.log("<-------------------- Q28 ------------------------------------>")
+
+let s = ""
+
+for (let i = 1; i <= 3; i++) {
+    for (let j = 3; j >= i; j--) {
+        s += j
+    }
+}
+console.log(s)
+console.log(typeof s)
+// i = 1 -> adds 321
+// i = 2 -> adds 32
+// i = 3 -> adds 3
+// Final answer: s = "321323"
 
 //Q29 --> PREDICT + THINK ->
 //        let n = 0
@@ -439,6 +902,65 @@ let choice = 0
 //                  -> predict again ... it HANGS . write in a comment exactly WHY
 //                  ( the round with n = 3 skips the ONLY line that changes n -> infinite loop )
 
+console.log("<-------------------- Q29 ------------------------------------>")
+
+// Part A
+let n = 0
+
+while (n < 5) {
+    n++
+    if (n === 3) continue
+    console.log(n)
+}
+
+// Output:
+// 1
+// 2
+// 4
+// 5
+console.log("<-------------------- Q29 Part B ------------------------------------>")
+
+// This version hangs when n becomes 3
+// because continue skips n++ and n stays 3
+
+// // Initialize variable
+// let n5 = 0
+
+// // Repeat while n5 is less than 5
+// while (n5 < 5) {
+
+//     // Skip when n5 is 3
+//     if (n5 === 3) continue
+
+//     // Print current value
+//     console.log(n5)
+
+//     // Increase n5 by 1
+//     n5++
+// }
+
+console.log("<-------------------- Q29 Part B Fixed code ------------------------------------>")
+
+// fixed code
+// Initialize variable
+let n5 = 0
+
+// repeat while n5 is less than 5
+while (n5 < 5) {
+
+    // Skip when n5 is 3
+    if (n5 === 3) {
+        n5++       // increase n5 by 1
+        continue   // skip remaining code
+    }
+
+    // P\print current value
+    console.log(n5)
+
+    // increase n5 by 1
+    n5++
+}
+
 
 // ------------------- SECTION H : INTERVIEW -> FIX THE BUG ( the code below is WRONG ) -------------------
 
@@ -451,6 +973,21 @@ let choice = 0
 //        HINT -> the SAME counting loop is written TWICE and the counter is never reset
 //        -> write the FIX in a comment ( which line must be deleted ) and the correct answer ( 12 )
 
+console.log("<-------------------- SECTION H : INTERVIEW -> FIX THE BUG ( the code below is WRONG ) ------------------------------------>")
+console.log("<-------------------- Q30 ------------------------------------>")
+
+let count_str2 = "hello my name is siddhant and i am a mentor for automation"
+let word_count2 = 1
+
+for (let i = 0; i < count_str2.length; i++) {
+    if (count_str2[i] === " ") {
+        word_count2++
+    }
+}
+
+// delete the second counting loop because it is repeated
+console.log(`Word count = ${word_count2}`)
+
 
 //Q31 --> BUG -> it NEVER ends ( infinite loop ) -> the line that moves the condition is missing :
 //        let i = 1
@@ -460,12 +997,43 @@ let choice = 0
 //        HINT -> a while loop needs something INSIDE that pushes the condition towards false
 //        FIX -> write the fixed loop and its output -> 1 2 3 4 5
 
+console.log("<-------------------- Q31 ------------------------------------>")
+
+// Output
+// 1
+// 2
+// 3
+// 4
+// 5
+
+let i = 1
+
+while (i <= 5) {
+    console.log(i)
+    i++ // Increase i
+}
+
 
 //Q32 --> BUG -> it prints 1 2 3 4 but it MUST print 1 2 3 4 5 ( one round is lost ) :
 //        for (let i = 1; i < 5; i++) { console.log(i) }
 //        HINT -> OFF BY ONE error -> compare < with <= ( which is the last value you need ? )
 //        FIX -> write the corrected condition + the output , and explain in a comment
 //               why < works when the counter is an index ( i < str.length ) but NOT here
+
+console.log("<-------------------- Q32 ------------------------------------>")
+
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+
+for (let i = 1; i <= 5; i++) {
+    console.log(i)
+}
+// Use <= because 5 must also be printed
+// For string indexes i < str.length because the last index is length - 1
 
 
 //Q33 --> BUG -> every row prints 4 stars but the triangle must GROW :
@@ -477,6 +1045,23 @@ let choice = 0
 //        HINT -> the inner loop must run the ROW'S OWN count , never a fixed number ( mistakes table )
 //        FIX -> make the inner loop stop at the right place -> rows -> *  **  ***  ****
 
+console.log("<-------------------- Q33 ------------------------------------>")
+
+// Output:
+// *
+// **
+// ***
+// ****
+
+for (let i = 1; i <= 4; i++) {
+    let row = ""
+
+    for (let j = 1; j <= i; j++) {
+        row += "*" // Add star
+    }
+
+    console.log(row)
+}
 
 //Q34 --> BUG -> it HANGS at n = 2 ( run it carefully -> stop with Ctrl + C ) :
 //        let n = 1
@@ -489,6 +1074,26 @@ let choice = 0
 //                 back to the condition without touching n -> n stays 2 forever
 //        FIX -> move the n++ inside the if ( before the continue ) -> expected output -> 1 3 5 7 9
 
+console.log("<-------------------- Q34 ------------------------------------>")
+
+// Output:
+// 1
+// 3
+// 5
+// 7
+// 9
+
+let n1 = 1
+
+while (n1 <= 10) {
+    if (n1 % 2 === 0) {
+        n1++ // Increase n
+        continue
+    }
+
+    console.log(n1)
+    n1++
+}
 
 // ------------------- SECTION I : INTERVIEW -> LOGIC BUILDERS ( think first , code later ) -------------------
 
@@ -503,6 +1108,24 @@ let choice = 0
 //        TEST with -> actualSum = 52 -> 3 , actualSum = 50 -> 5 , actualSum = 55 ->
 //        THINK -> what must you print when nothing is missing ? decide + write it in a comment
 
+console.log("<-------------------- Q35 ------------------------------------>")
+
+// Output:
+// Missing number = 3
+
+let n2 = 10
+let actualSum = 52
+let expectedSum = 0
+
+for (let i = 1; i <= n2; i++) {
+    expectedSum = expectedSum + i
+}
+
+let missing_num = expectedSum - actualSum
+
+console.log(`Missing number = ${missing_num}`)
+// If missing_num is 0 no number is missing
+
 
 //Q36 --> TRAILING ZEROS IN n! ( interview favourite ) ->
 //        print HOW MANY trailing zeros 10! has -> "10! has 2 trailing zeros"
@@ -512,6 +1135,24 @@ let choice = 0
 //                 -> AND remember 25 contributes TWO fives ( 25 = 5 x 5 ) -> what about 125 ?
 //        do NOT calculate the full factorial -> count the fives with a loop
 //        TEST with -> 10 -> 2 zeros , 25 -> 6 zeros , 100 -> 24 zeros
+
+console.log("<-------------------- Q36 ------------------------------------>")
+
+// Output:
+// 10! has 2 trailing zeros
+// 25! has 6 trailing zeros
+// 100! has 24 trailing zeros
+
+let n3 = 25
+let temp_num3 = n3
+let zero_count = 0
+
+while (temp_num3 >= 5) {
+    temp_num3 = Math.floor(temp_num3 / 5)
+    zero_count = zero_count + temp_num3
+}
+
+console.log(`${n3}! has ${zero_count} trailing zeros`)
 
 
 //Q37 --> GCD + LCM ( very common interview question ) ->
@@ -524,6 +1165,40 @@ let choice = 0
 //        TEST with -> 48 & 18 ( GCD 6 , LCM 144 ) , 15 & 25 ( GCD 5 , LCM 75 )
 //        BONUS -> solve the GCD with the Euclid rule ( bigger - smaller , repeat , while loop )
 
+console.log("<-------------------- Q37 PART A -------------------->")
+
+// Output:
+// GCD = 6
+
+let a = 48
+let b = 18
+let gcd = 1
+
+// Check each number
+for (let i = 1; i <= a && i <= b; i++) {
+
+    // Check common divisor
+    if (a % i === 0 && b % i === 0) {
+        gcd = i
+    }
+}
+
+console.log(`GCD = ${gcd}`)
+
+console.log("<-------------------- Q37 PART B -------------------->")
+
+// Output:
+// LCM = 144
+
+let a1 = 48
+let b1 = 18
+let gcd1 = 6
+
+// LCM
+let lcm = (a1 * b1) / gcd1
+
+console.log(`LCM = ${lcm}`)
+
 
 //Q38 --> DECIMAL -> BINARY conversion with a loop ( number systems + loops ) ->
 //        let dec = 13
@@ -533,6 +1208,26 @@ let choice = 0
 //                 ( it is the same trick as reversing the number -> Q11 )
 //        TEST with -> 13 -> 1101 , 10 -> 1010 , 255 -> 11111111
 //        EDGE CASE -> dec = 0 -> the loop never runs -> what must you print ? decide + write it
+
+console.log("<-------------------- Q38 ------------------------------------>")
+
+// Output:
+// 13 in binary = 1101
+
+let dec = 13
+let temp_dec = dec
+let binary = ""
+
+while (temp_dec > 0) {
+    let bit = temp_dec % 2 // get bit
+    binary = bit + binary // add backwards
+    temp_dec = Math.floor(temp_dec / 2) // remove bit
+}
+
+if (dec === 0) {
+    binary = "0"
+}
+console.log(`${dec} in binary = ${binary}`)
 
 
 //Q39 --> FIRST NON REPEATING CHARACTER ( string + nested loop interview question ) ->
@@ -544,6 +1239,35 @@ let choice = 0
 //        TEST with -> "javascript" -> j , "abracadabra" -> c
 //        THINK -> "aabb" has NO non repeating character -> what must your program print ?
 
+console.log("<-------------------- Q39 ------------------------------------>")
+
+// Output:
+// First non repeating character = j
+
+let s1 = "javascript"
+let first_char = ""
+
+for (let i = 0; i < s1.length; i++) {
+    let count = 0
+
+    for (let j = 0; j < s1.length; j++) {
+        if (s1[i] === s1[j]) {
+            count++
+        }
+    }
+
+    if (count === 1) {
+        first_char = s1[i]
+        break // Stop searching
+    }
+}
+
+if (first_char !== "") {
+    console.log(`First non repeating character = ${first_char}`)
+} else {
+    console.log("No non repeating character found")
+}
+
 
 //Q40 --> DIGITAL ROOT -> keep summing the digits until only ONE digit is left ->
 //        let dr_num = 47891
@@ -552,6 +1276,29 @@ let choice = 0
 //        HINT -> reuse the Q10 digit sum , but REPEAT it in a loop while the number >= 10
 //                 -> do...while is perfect here ( a single digit must still run ONCE )
 //        TEST with -> 47891 -> 2 , 999 -> 9 ( 999 -> 27 -> 9 ) , 7 -> 7
+
+console.log("<-------------------- Q40 ------------------------------------>")
+
+// Output:
+// Digital root of 47891 = 2
+
+let dr_num = 47891
+let dr_temp = dr_num
+let digit_sum = 0
+
+do {
+    digit_sum = 0
+
+    while (dr_temp > 0) {
+        let digit = dr_temp % 10 // Get digit
+        digit_sum = digit_sum + digit // Add digit
+        dr_temp = Math.floor(dr_temp / 10) // Remove digit
+    }
+
+    dr_temp = digit_sum
+} while (dr_temp >= 10)
+
+console.log(`Digital root of ${dr_num} = ${dr_temp}`)
 
 // ------------------- SECTION J : BONUS CHALLENGE ( MINI PROJECTS ) -------------------
 
@@ -566,6 +1313,55 @@ let choice = 0
 //        expected -> 1 2 3 4 5 6 7 8 9 153 370 371 407
 //        NOTE -> 1000 is NOT one -> 1^3 + 0 + 0 + 0 = 1  ( write this in a comment )
 
+console.log("<-------------------- Q41 -------------------->")
+
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+// 153
+// 370
+// 371
+// 407
+
+// check numbers from 1 to 1000
+for (let num = 1; num <= 1000; num++) {
+
+    let temp_num = num
+    let digit_count = 0
+    let sum = 0
+
+    // count the digits
+    while (temp_num > 0) {
+        digit_count++
+        temp_num = Math.floor(temp_num / 10)
+    }
+
+    temp_num = num
+
+    // Calculate the digit powers
+    while (temp_num > 0) {
+        let digit = temp_num % 10
+        sum = sum + Math.pow(digit, digit_count)
+        temp_num = Math.floor(temp_num / 10)
+    }
+
+    // check armstrong number
+    if (sum === num) {
+        console.log(num)
+    }
+}
+
+// 1000 is NOT an Armstrong number
+// 1^4 + 0^4 + 0^4 + 0^4 = 1, not 1000
+// because the sum of its digits raised to the power 4 is 1 not 1000
+
 
 //Q42 --> BONUS ( MINI PROJECT - WORD REVERSER ) ->
 //        starter -> let sentence = "loops are fun"
@@ -576,8 +1372,51 @@ let choice = 0
 //                 watch the extra space at the END -> "fun are loops " is WRONG
 //        TEST with -> "i am learning javascript" -> "javascript learning am i"
 
-let sentence = "loops are fun"
+console.log("<-------------------- Q42 -------------------->")
 
+// Store the sentence
+
+// Split sentence into words using split(" ")
+
+// Create an empty string for reversed sentence
+
+// Start loop from the last word index words.length - 1
+// Continue until index reaches 0
+// Decrease index in every round
+
+// Add words to the new string in reverse order
+// Add space only between words
+// Avoid extra space at the end
+
+// Print reversed sentence
+
+
+// Output:
+// Input: "loops are fun"
+// Output: The reversed sentence is:- fun are loops
+
+// Input: i am learning javascript
+// Output: The reversed sentence is:- javascript learning am i
+
+// Input: javascript learning am i
+// Output: The reversed sentence is:- i am learning javascript
+
+let sentence = "javascript learning am i"
+let words = sentence.split(" ")
+let reversed_sentence = ""
+
+// Read words from last to first
+for (let i = words.length - 1; i >= 0; i--) {
+
+    // add a space between words
+    if (reversed_sentence !== "") {
+        reversed_sentence = reversed_sentence + " "
+    }
+
+    reversed_sentence = reversed_sentence + words[i]
+}
+
+console.log(`The reversed sentence is:- ${reversed_sentence}`)
 
 //Q43 --> BONUS ( MINI PROJECT - HIGHER / LOWER ) -> simulate a guessing game with a loop ->
 //        the secret number is 42 . the guesses are already declared below and they are used
@@ -592,10 +1431,67 @@ let sentence = "loops are fun"
 //                 then compare with the secret -> print the message -> attempt++
 //                 stop with break ( or with the loop condition ) when the guess === secret
 
+console.log("<-------------------- Q43 -------------------->")
+
+// Store secret number and three guesses
+// Create attempt counter
+// Create a variable to store the current guess
+
+// loop
+
+// Select guess based on attempt number
+// Attempt 1 -> g1
+// Attempt 2 -> g2
+// Attempt 3 -> g3
+
+// Compare guess with secret number
+
+// If guess is smaller, print "too low"
+// If guess is bigger, print "too high"
+// If guess is correct, print success message
+// Stop the loop using break
+
+// increase attempt counter after an incorrect guess
+
+
+// Output:
+// Attempt 1 -> 10 -> too low
+// Attempt 2 -> 60 -> too high
+// Attempt 3 -> 42 -> correct ! found in 3 attempts
+
 let secret = 42
 let g1 = 10
 let g2 = 60
 let g3 = 42
+let attempt = 1
+let guess = 0
+
+// continue until correct guess
+while (true) {
+
+    // select the guess
+    if (attempt === 1) {
+        guess = g1
+    } else if (attempt === 2) {
+        guess = g2
+    } else if (attempt === 3) {
+        guess = g3
+    }
+
+    // compare the guess
+    if (guess < secret) {
+        console.log(`Attempt ${attempt} -> ${guess} -> too low`)
+    } else if (guess > secret) {
+        console.log(`Attempt ${attempt} -> ${guess} -> too high`)
+    } else {
+        console.log(`Attempt ${attempt} -> ${guess} -> correct ! found in ${attempt} attempts`)
+        break
+    }
+
+    attempt++
+}
+
+
 
 // ============================================
 // SUBMISSION CHECKLIST
