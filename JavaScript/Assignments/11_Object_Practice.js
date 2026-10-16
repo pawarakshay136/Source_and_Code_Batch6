@@ -12,7 +12,7 @@ const person = {
     bloodGroup: "A+",
     sex: "Male",
     qualification: "Graduate",
-    skills: ["Git", "GitHub", "JavaScript", "Java", "Python"],
+    skills: ["Git", "GitHub", "JavaScript", "Java"],
     hobbies: ["Gardening", "Reading", "Mobile Photography"],
     favoriteColor: "Blue",
     favoriteFood: "Puran Poli",
